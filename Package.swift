@@ -14,10 +14,10 @@ let package = Package(
     .library(name: "BuildkiteTestCollector", targets: ["BuildkiteTestCollector"])
   ],
   targets: [
-    .target(name: "BuildkiteTestCollector", dependencies: ["Core", "Loader"]),
-    .target(name: "Core"),
-    .target(name: "Loader"),
+    .target(name: "BuildkiteTestCollector", dependencies: ["BuildkiteCore", "BuildkiteLoader"]),
+    .target(name: "BuildkiteCore"),
+    .target(name: "BuildkiteLoader"),
     .testTarget(name: "BuildkiteTestCollectorTests", dependencies: ["BuildkiteTestCollector"]),
-    .testTarget(name: "CoreTests", dependencies: ["Core"])
+    .testTarget(name: "BuildkiteCoreTests", dependencies: ["BuildkiteCore"])
   ]
 )
