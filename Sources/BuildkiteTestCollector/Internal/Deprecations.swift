@@ -1,4 +1,4 @@
-import Core
+import BuildkiteCore
 
 // MARK: - Deprecated after 0.3.0
 
@@ -10,6 +10,6 @@ extension TestCollector {
   /// - Parameter content: The content of this annotation
   @available(*, deprecated, message: "'annotate' is no longer supported")
   public static func annotate(_ content: @autoclosure () -> String) {
-    Core.TestCollector.shared?.annotate(content())
+      BuildkiteCore.TestCollector.shared?.annotate(content())
   }
 }
